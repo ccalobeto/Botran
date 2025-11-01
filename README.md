@@ -1,11 +1,11 @@
 
 ---
 
-# 🧩 Plan de Caso de Uso: Analytics para Ingenio Azucarero Pomalca
+# 🧩 Plan de Caso de Uso: Analytics para Ingenio Azucarero
 
 **Dirigido a:** Gerente de IT
 
-**Empresa:** Agroindustrial Pomalca S.A.A.
+**Empresa:** Grupo Botran - Guatemala
 
 **Objetivo general:** Implementar un ecosistema de datos integral que permita optimizar la productividad agrícola e industrial, reducir costos operativos y mejorar la toma de decisiones mediante analítica avanzada.
 
@@ -23,7 +23,7 @@ Identificar, clasificar y documentar las fuentes de datos relevantes para la ope
 | ----------------- | ------------------------------------------------------------ | --------------------- | -------------- | -------------------------------------------- |
 | **Agrícola**      | Sensores IoT de humedad, pluviómetros, estaciones climáticas | Numérico, tiempo real | Horaria        | Necesario para optimizar riego y cosecha     |
 | **Producción**    | SCADA y PLCs de molienda, calderas y centrifugado            | Numérico, eventos     | Minutal        | Permite calcular eficiencia de molienda      |
-| **Mantenimiento** | Sistema ERP (SAP / Oracle)                                   | Registros históricos  | Diario         | Control de paradas programadas y fallas      |
+| **Mantenimiento** | Sistema ERP (SAP)                                   | Registros históricos  | Diario         | Control de paradas programadas y fallas      |
 | **Logística**     | GPS de transporte de caña                                    | Geolocalización       | En tiempo real | Seguimiento del transporte y tiempos muertos |
 | **Finanzas**      | ERP / Contabilidad                                           | Transaccional         | Diario         | Para análisis de costo por tonelada          |
 | **RRHH**          | Asistencia y rendimiento laboral                             | Categórico / numérico | Diario         | Evaluar eficiencia de mano de obra           |
@@ -41,7 +41,7 @@ Identificar, clasificar y documentar las fuentes de datos relevantes para la ope
 
 ### Objetivo
 
-Centralizar y estructurar los datos de toda la operación en una arquitectura escalable y gobernada, habilitando el análisis unificado.
+Centralizar y estructurar los datos de toda la operación en una arquitectura escalable y gobernada.
 
 ### Arquitectura propuesta
 
@@ -51,7 +51,7 @@ Fuentes → Ingesta → Data Lake (Raw, Curated, Trusted) → Warehouse → BI /
 
 **Componentes sugeridos:**
 
-* **Ingesta:** Apache Airflow / Cloud Composer
+* **Ingesta:** Apache Airflow / Kestra/ Cloud Composer
 * **Storage:** Google Cloud Storage / AWS S3
 * **Procesamiento:** Polars/ PySpark / dbt / Dataflow
 * **Catálogo:** Data Catalog / Glue
@@ -71,7 +71,7 @@ Fuentes → Ingesta → Data Lake (Raw, Curated, Trusted) → Warehouse → BI /
 * **Particionamiento:** por `fecha/plant_id/lote`.
 * **Compresión:** Parquet + Snappy.
 * **Retención:** raw 90 días, silver 3 años, gold 7 años.
-* **Backups:** política tiered (nearline/coldline para históricos).
+* **Backups:** para históricos.
 
 ### ⚙️ Gobernanza
 
@@ -93,14 +93,14 @@ Fuentes → Ingesta → Data Lake (Raw, Curated, Trusted) → Warehouse → BI /
 
 ### 🧱 Entregables
 
-* Diagrama de arquitectura completo.
-* Plantillas ETL (Airflow DAGs).
+* Diagrama de arquitectura.
+* Plantillas ETL (Airflow / dbt DAGs ).
 * Políticas de acceso, calidad y retención.
-* Catálogo inicial con 15 datasets prioritarios.
+* Catálogo inicial con D datasets prioritarios.
 
 ---
 
-## 📊 Etapa 3: Modelo Analítico y Dashboard
+## 📊 Etapa 3: Modelo Analítico
 
 ### Objetivo
 
@@ -133,6 +133,15 @@ Implementar un modelo analítico que permita medir la eficiencia operativa y det
 * Notebooks EDA.
 * Dashboards.
 * Integración con Power BI / Observablehq.
+
+#### Herramientas de desarrollo
+
+* Github Ecosystem (Enterprise, Codespaces, Copilot, Models y Project)
+* DBT
+* Kestra / Airflow
+* Google GCP Account and Privileges
+* Power BI (inc Parallels)
+* Observablehq
 
 ## 📅 Cronograma general (resumen)
 
