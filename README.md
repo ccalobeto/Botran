@@ -5,7 +5,7 @@
 
 **Dirigido a:** Gerente de IT
 
-**Empresa:** Grupo Botran - Guatemala
+**Empresa:** Rones de Guatemala
 
 **Objetivo general:** Implementar un ecosistema de datos integral que permita optimizar la productividad agrícola e industrial, reducir costos operativos y mejorar la toma de decisiones mediante analítica avanzada.
 
@@ -56,7 +56,7 @@ Fuentes → Ingesta → Data Lake (Raw, Curated, Trusted) → Warehouse → BI /
 * **Procesamiento:** Polars/ PySpark / dbt / Dataflow
 * **Catálogo:** Data Catalog / Glue
 * **Warehouse:** BigQuery / Snowflake
-* **Visualización:** Power BI / Looker / Data Studio
+* **Visualización:** Power BI / Observablehq / Looker
 
 ### Esquema del Data Lake
 
@@ -96,7 +96,7 @@ Fuentes → Ingesta → Data Lake (Raw, Curated, Trusted) → Warehouse → BI /
 * Diagrama de arquitectura.
 * Plantillas ETL (Airflow / dbt DAGs ).
 * Políticas de acceso, calidad y retención.
-* Catálogo inicial con D datasets prioritarios.
+* Catálogo inicial con 10 datasets prioritarios.
 
 ---
 
@@ -104,7 +104,7 @@ Fuentes → Ingesta → Data Lake (Raw, Curated, Trusted) → Warehouse → BI /
 
 ### Objetivo
 
-Implementar un modelo analítico que permita medir la eficiencia operativa y detectar oportunidades de mejora en tiempo real.
+Implementar un modelo analítico que permita medir o predecir la eficiencia operativa y detectar oportunidades de mejora en alguno de los Principales KPIs.
 
 ### Principales KPIs
 
@@ -130,8 +130,7 @@ Implementar un modelo analítico que permita medir la eficiencia operativa y det
 
 ### 📦 Entregables
 
-* Notebooks EDA.
-* Dashboards.
+* Notebooks / scripts EDA.
 * Integración con Power BI / Observablehq.
 
 #### Herramientas de desarrollo
@@ -140,15 +139,15 @@ Implementar un modelo analítico que permita medir la eficiencia operativa y det
 * DBT
 * Kestra / Airflow
 * Google GCP Account and Privileges
-* Power BI (inc Parallels)
+* Power BI (incuida licencia Parallels)
 * Observablehq
 
 ## 📅 Cronograma general (resumen)
 
 | Etapa                       | Semanas | Entregables clave                        |
 | --------------------------- | ------- | ---------------------------------------- |
-| **1. Data Mapping**         | X     | Inventario de datos, gobernanza, calidad |
-| **2. Diseño del Data Lake** | Y    | Arquitectura y pipelines productivos     |
-| **3. Modelo Analítico**     | Z   | Dashboards, modelos, capacitación        |
+| **1. Data Mapping**         | 5 - 7     | Inventario de datos, gobernanza, calidad |
+| **2. Diseño del Data Lake** | 8 - 12   | Arquitectura y pipelines productivos     |
+| **3. Modelo Analítico**     | 13 - 16  | 1 Modelo Piloto        |
 
 ---
