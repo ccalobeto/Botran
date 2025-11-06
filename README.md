@@ -150,4 +150,28 @@ Implementar un modelo analítico que permita medir o predecir la eficiencia oper
 | **2. Diseño del Data Lake** | 8 - 12   | Arquitectura y pipelines productivos     |
 | **3. Modelo Analítico**     | 13 - 16  | 1 Modelo Piloto        |
 
----
+## 💰 Costos de Implementación del Proyecto
+
+### **Etapa 1: Data Mapping (Semanas 5–7)**
+
+* Licencias y herramientas de catalogación: **USD 1,000**
+* Capacitación inicial(costeo por estar fuera de labores): **USD 2,000**
+* **Total estimado:** **USD 3,000**
+
+### **Etapa 2: Diseño del Data Lake (Semanas 8–12)**
+
+* Infraestructura Cloud (GCP / AWS): **USD 1,000**
+* Desarrollo de pipeline y QA: **USD 0.0**
+* Licencias y monitoreo: **USD 1,000**
+* **Total estimado:** **USD 2,000**
+
+### **Etapa 3: Modelo Analítico y Dashboard (Semanas 13–16)**
+
+* Licencias BI (Power BI / Looker): **USD 200**
+* Desarrollo de modelo y dashboard: **USD 0.0**
+* Capacitación de usuarios(costeo por estar fuera de labores): **USD 1,000**
+* **Total estimado:** **USD 1,200**
+
+### **Consultoria y análisis de datos**: **USD 6,000**
+
+### **📊 Costo Total del Proyecto (16 semanas): ≈ USD 12,200**
